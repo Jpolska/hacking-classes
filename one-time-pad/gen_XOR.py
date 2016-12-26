@@ -1,7 +1,9 @@
 from random import randint
 
+
 def GenRandStr(n):
     return "".join(chr(randint(0, 255)) for x in range(n))
+
 
 def stob(s):
     out = ''
@@ -9,9 +11,10 @@ def stob(s):
         out += bin(ord(ch))[2:] + " "
     return out
 
+
 def xor(a, b):
     assert len(a) == len(b)
-    return "".join( chr(ord(a[x])^ord(b[x])) for x in range(len(a)))
+    return "".join(chr(ord(a[x]) ^ ord(b[x])) for x in range(len(a)))
 
 p1 = "######"
 p2 = "######"

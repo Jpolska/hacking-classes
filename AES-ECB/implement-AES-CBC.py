@@ -3,11 +3,13 @@ from Crypto.Cipher import AES
 KEY = "YELLOW SUBMARINE"
 BLOCK_SIZE = 16
 
+
 def pad(message):
-    number_of_missing_bytes = BLOCK_SIZE - len(message)%BLOCK_SIZE
+    number_of_missing_bytes = BLOCK_SIZE - len(message) % BLOCK_SIZE
     for x in range(number_of_missing_bytes):
         message += str(chr(number_of_missing_bytes))
     return message
+
 
 def Encrypt(pt, key):
     mode = AES.MODE_ECB
