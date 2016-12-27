@@ -52,14 +52,14 @@ def Encrypt(message):
     ciphertext = EncryptECB(message, KEY)
     return enhex(ciphertext)
 
-##############SAMPLE CODE###############
+# #############SAMPLE CODE###############
 message = enhex("Ala ma kota")
 ciphertext = Encrypt(message)
 print unhex(ciphertext)
-########################################
+# #######################################
 
 
-#############YOUR CODE##################
+# ############YOUR CODE##################
 
 
-########################################
+# #######################################
