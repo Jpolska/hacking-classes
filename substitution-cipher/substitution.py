@@ -27,6 +27,7 @@ def Encrypt(text, sub):
 def PrintOutSub(sub):
     print sub
 
+
 sub = GetRandomSub()
 text = open("flag.txt").read()
 with open("ciphertext.txt", 'w') as outf:
