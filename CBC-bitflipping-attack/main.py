@@ -11,6 +11,4 @@ def get_cookie(user_data):
 
 
 def validate_user(cookie):
-    if ";admin=true;" in cookie:
-        return True
-    return False
+    return ";admin=true;" in cookie
