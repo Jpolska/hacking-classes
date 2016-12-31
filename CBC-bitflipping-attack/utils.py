@@ -19,7 +19,7 @@ def unhex(text):
 
 def pad(text):
     padding_size = BS - len(text) % BS
-    text += "".join(str(chr(padding_size)) for x in range(padding_size))
+    text += chr(padding_size) * padding_size
     return text
 
 
