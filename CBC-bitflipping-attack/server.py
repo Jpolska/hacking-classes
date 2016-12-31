@@ -5,6 +5,7 @@ import threading
 from networking import *
 from utils import *
 
+# TODO Make it different for every user
 KEY = os.urandom(16)
 IV = os.urandom(16)
 
@@ -35,6 +36,8 @@ class SimpleCookieServer():
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
+            print '[+] Got connection from ' + address[0] + ":" \
+                                             + str(address[1])
             client.settimeout(60)
             threading.Thread(target=self.listen_to_client,
                              args=(client, address)).start()

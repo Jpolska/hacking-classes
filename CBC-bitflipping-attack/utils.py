@@ -25,7 +25,8 @@ def pad(text):
 
 def unpad(text):
     padding_size = ord(text[-1])
-    # Check if padding is correct
+    # If any of the last padding_size characters of text differs from
+    # padding_size then raise padding error
     if filter(lambda x: ord(x) != padding_size, text[-padding_size:]):
         raise InvalidPadding('Invalid PKCS#7 padding')
     return text[:-padding_size]
